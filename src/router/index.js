@@ -4,6 +4,7 @@ import Store from "../store";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Home from "../views/Home.vue";
+import Inmobiliaria from "../views/Inmobiliaria.vue";
 
 Vue.use(VueRouter);
 
@@ -26,6 +27,12 @@ const routes = [
     path: "/home",
     name: "Home",
     component: Home,
+    meta: { requiresToBeLoged: true },
+  },
+  {
+    path: "/inmobiliaria/:id",
+    name: "Inmobiliaria",
+    component: Inmobiliaria,
     meta: { requiresToBeLoged: true },
   },
 ];
